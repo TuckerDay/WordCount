@@ -10,6 +10,12 @@ import java.util.TreeMap;
 public class WordCount {
 
   public static void main(String[] args) {
+    // Limit to a single argument (In future add feature to work with multiple)
+    if (args.length != 1){
+      System.out.println("This program takes exactly one argument.");
+      return;
+    }
+
     try {
       File bookFile = new File(args[0]);
       Scanner sc = new Scanner(bookFile);
@@ -45,4 +51,3 @@ public class WordCount {
     }
   }
 }
-
